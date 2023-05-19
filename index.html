@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inner">
+        <div class="form__box">
+          <form class="form" id="form">
+            <div class="form__inner">
+              <div class="form__table">
+                <label class="form__label" for="day">day</label>
+                <br />
+                <input
+                  class="form__input"
+                  type="number"
+                  name="day"
+                  id="day"
+                  placeholder="DD"
+                  min="1"
+                  max="31"
+                />
+              </div>
+              <div class="form__table">
+                <label class="form__label" for="month">month</label>
+                <br />
+                <input
+                  class="form__input"
+                  type="number"
+                  name="month"
+                  id="montm"
+                  placeholder="MM"
+                  min="1"
+                  max="12"
+                />
+              </div>
+              <div class="form__table">
+                <label class="form__label" for="year">year</label>
+                <br />
+                <input
+                  class="form__input"
+                  type="number"
+                  name="year"
+                  id="year"
+                  placeholder="YYYY"
+                />
+              </div>
+            </div>
+            <hr />
+            <button class="button" type="submit"></button>
+          </form>
+        </div>
+        <div class="form__output">
+          <div class="form__output-item form__output-days">
+            <span>--</span> years
+          </div>
+          <div class="form__output-item form__output-months">
+            <span>--</span> months
+          </div>
+          <div class="form__output-item form__output-years">
+            <span>--</span> days
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+body{
+    background-color: $offWhite;  
+}
+hr{
+    border: 1px solid $lightGrey;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    margin-top: 170px;
+    // margin-bottom: 250px;
+}
+.inner {
+    width: 840px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 28px;
+    border-bottom-right-radius: 210px;
+    padding-bottom: 57px;
+}
+.form {    
+    position: relative;    
+    &__box{
+        padding: 45px 50px;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 45px;
+        & div{
+            margin-right: 25px;
+        }
+    }
+    &__label{
+        display: inline-block;
+        text-transform: uppercase;
+        @include fonts(15px, 800, 25px);
+        letter-spacing: 2px;
+        color: $smokeyGrey;
+        padding-bottom: 5px;
+    }
+    &__input{
+        border: 1px solid $lightGrey;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-weight: 800;
+        width: 170px;
+        font-size: 35px;
+    }
+    &__output{
+        padding: 10px 50px;
+    }
+    &__output-item{
+        @include fonts(110px, 700, 110px);
+        font-style: italic;
+        & span{
+            color: $purple;
+        }
+    }
+}
+.button{
+    display: inline-block;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background-color: $purple;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    &::before{
+        content: url(../img/icon-arrow.svg);        
+    }
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+    & a{
+        color: hsl(228, 45%, 44%);
+    }
+}
+
