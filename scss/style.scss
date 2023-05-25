@@ -38,6 +38,24 @@ hr{
             margin-right: 25px;
         }
     }
+    &__control input:focus {
+        border-color: $purple;
+    }
+    &__control.succes input{
+        border-color: $smokeyGrey;
+    }
+    &__control.error input{
+        border-color: $lightRed;
+    }
+    &__control small {
+        color: $lightRed;
+        @include fonts(15px, 400, 15px);
+        font-style: italic;
+        visibility: hidden;
+    }
+    &__control.error small{
+        visibility: visible;
+    }
     &__label{
         display: inline-block;
         text-transform: uppercase;
@@ -64,6 +82,7 @@ hr{
             color: $purple;
         }
     }
+    
 }
 .button{
     display: inline-block;
