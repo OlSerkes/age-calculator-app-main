@@ -73,12 +73,6 @@ function isValidDate(year, month, day) {
   }
 }
 
-// //Check valid year
-// function checkValidYear(input) {
-//   const today = new Date();
-//   if (inputYear.value)
-// }
-
 // Get age
 function getAge() {
   const today = new Date();
@@ -119,6 +113,7 @@ function getAge() {
             <span>${daysleft}</span> days
           </div>`);
 }
+
 //Submit
 form.addEventListener('submit', function (event) {
   event.preventDefault();
