@@ -65,7 +65,7 @@ I want to continue focusing on learning using built-in object Date and it's meth
 
 ### Useful resources
 
-- [JavaScript.info](https://javascript.info/date) - This helped me object Date. I really liked this site and will use it going forward.
+- [JavaScript.info](https://javascript.info/date) - This helped me with object Date. I really liked this site and will use it going forward.
 - [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) - Documentation which helped me finally understand Date(). I'd recommend it to anyone still learning this concept.
 
 ## Author
