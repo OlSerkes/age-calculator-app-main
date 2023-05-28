@@ -57,16 +57,7 @@ function isValidDate() {
     inputDate.getMonth() !== inputMonth ||
     inputDate.getDate() !== inputDay
   ) {
-    // if (
-    //   inputDate.getFullYear() !== inputYear ||
-    //   inputDate.getMonth() !== inputMonth ||
-    //   inputDate.getDate() !== inputDay
-    // ) {
     showErrorMessage(day, `Must be a valid date`);
-    //}
-    // else {
-    //   showErrorMessage(year, 'Must be in the past');
-    // }
   } else {
     getAge();
   }
@@ -74,9 +65,6 @@ function isValidDate() {
 
 // Get age
 function getAge() {
-  // const today = new Date();
-  // console.log(today);
-
   const birthdayDay = +day.value;
   const birthdayMonth = +month.value - 1;
   const birthdayYear = +year.value;
@@ -118,14 +106,6 @@ form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   if (!checkRequired([day, month, year])) {
-    // checkInputLength(inputDay, 1, 2);
-    // checkInputLength(inputMonth, 1, 2);
-    //checkInputLength(inputYear, 4, 4);
-    // checkValidInput(day, 1, 31);
-    // checkValidInput(month, 1, 12);
     isValidDate();
-    //isValidDate(year, month, day);
-
-    //getAge();
   }
 });
