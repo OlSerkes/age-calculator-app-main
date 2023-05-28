@@ -1,8 +1,11 @@
 const form = document.getElementById('form');
-const inputDay = document.getElementById('day');
-const inputMonth = document.getElementById('month');
-const inputYear = document.getElementById('year');
+const day = document.getElementById('day');
+const month = document.getElementById('month');
+const year = document.getElementById('year');
 const output = document.querySelector('.form__output');
+
+const today = new Date();
+console.log(today);
 
 //Show input error message
 function showErrorMessage(input, message) {
@@ -33,41 +36,37 @@ function checkRequired(inputArr) {
   return isRequired;
 }
 
-//Check years input length
-function checkInputLength(input, min, max) {
-  if (input.value.length < min || input.value.length > max) {
-    console.log(input.value.length);
-    showErrorMessage(input, `Must be ${quantity} characters`);
-  } else {
-    showSuccess(input);
-  }
-}
-
-//Check valid entered day/month
-function checkValidEnteredNum(input, min, max) {
-  if (input.value < min || input.value > max) {
-    showErrorMessage(input, `Must be a valid ${input.name}`);
-  } else {
-    showSuccess(input);
-  }
-}
-
 //Check valid date
-function isValidDate(year, month, day) {
-  const inputDate = new Date(year.value, month.value - 1, day.value);
+function isValidDate() {
+  const inputDay = +day.value;
+  const inputMonth = +month.value - 1;
+  const inputYear = +year.value;
+  const inputDate = new Date(inputYear, inputMonth, inputDay);
   console.log(inputDate);
-  console.log(year.value);
 
-  if (
-    inputDate.getFullYear() !== year.value &&
-    inputDate.getMonth() !== month.value - 1 &&
-    inputDate.getDate() !== day.value
-  ) {
-    showErrorMessage(year, `Must be a valid date`) ||
-      showErrorMessage(month, `Must be a valid date`) ||
-      showErrorMessage(day, `Must be a valid date`);
-  } else if (inputDate > new Date()) {
+  if (inputDay < 1 || inputDay > 31) {
+    showErrorMessage(day, `Must be a valid ${day.name}`);
+  }
+  if (inputMonth < 1 || inputMonth > 12) {
+    showErrorMessage(month, `Must be a valid ${month.name}`);
+  }
+  if (inputDate > today) {
     showErrorMessage(year, 'Must be in the past');
+  } else if (
+    inputDate.getFullYear() !== inputYear ||
+    inputDate.getMonth() !== inputMonth ||
+    inputDate.getDate() !== inputDay
+  ) {
+    // if (
+    //   inputDate.getFullYear() !== inputYear ||
+    //   inputDate.getMonth() !== inputMonth ||
+    //   inputDate.getDate() !== inputDay
+    // ) {
+    showErrorMessage(day, `Must be a valid date`);
+    //}
+    // else {
+    //   showErrorMessage(year, 'Must be in the past');
+    // }
   } else {
     getAge();
   }
@@ -75,12 +74,12 @@ function isValidDate(year, month, day) {
 
 // Get age
 function getAge() {
-  const today = new Date();
-  console.log(today);
+  // const today = new Date();
+  // console.log(today);
 
-  const birthdayDay = +inputDay.value;
-  const birthdayMonth = +inputMonth.value - 1;
-  const birthdayYear = +inputYear.value;
+  const birthdayDay = +day.value;
+  const birthdayMonth = +month.value - 1;
+  const birthdayYear = +year.value;
 
   const brthDay = new Date(birthdayYear, birthdayMonth, birthdayDay);
   console.log(brthDay);
@@ -118,12 +117,15 @@ function getAge() {
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  if (!checkRequired([inputDay, inputMonth, inputYear])) {
-    checkInputLength(inputDay, 1, 2);
-    checkInputLength(inputMonth, 1, 2);
-    checkInputLength(inputYear, 4, 4);
-    checkValidEnteredNum(inputDay, 1, 31);
-    checkValidEnteredNum(inputMonth, 1, 12);
-    isValidDate(inputYear, inputMonth, inputDay);
+  if (!checkRequired([day, month, year])) {
+    // checkInputLength(inputDay, 1, 2);
+    // checkInputLength(inputMonth, 1, 2);
+    //checkInputLength(inputYear, 4, 4);
+    // checkValidInput(day, 1, 31);
+    // checkValidInput(month, 1, 12);
+    isValidDate();
+    //isValidDate(year, month, day);
+
+    //getAge();
   }
 });

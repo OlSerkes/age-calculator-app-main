@@ -104,14 +104,10 @@ body {
 hr {
   border: 1px solid #dbdbdb;
   position: absolute;
-  top: 100%;
   width: 100%; }
 
-.wrapper {
-  margin-top: 170px; }
-
 .inner {
-  width: 840px;
+  max-width: 840px;
   margin: 0 auto;
   background-color: white;
   border-radius: 28px;
@@ -120,14 +116,9 @@ hr {
 
 .form {
   position: relative; }
-  .form__box {
-    padding: 45px 50px; }
   .form__inner {
     display: flex;
-    flex-direction: row;
-    padding-bottom: 45px; }
-    .form__inner div {
-      margin-right: 25px; }
+    flex-direction: row; }
   .form__control input:focus {
     border-color: #854dff; }
   .form__control.succes input {
@@ -136,9 +127,6 @@ hr {
     border-color: #ff5757; }
   .form__control small {
     color: #ff5757;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
     font-style: italic;
     visibility: hidden; }
   .form__control.error small {
@@ -146,25 +134,14 @@ hr {
   .form__label {
     display: inline-block;
     text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 800;
-    line-height: 25px;
     letter-spacing: 2px;
     color: #716f6f;
     padding-bottom: 5px; }
   .form__input {
     border: 1px solid #dbdbdb;
     border-radius: 5px;
-    padding: 10px 25px;
-    font-weight: 800;
-    width: 170px;
-    font-size: 35px; }
-  .form__output {
-    padding: 10px 50px; }
+    font-weight: 800; }
   .form__output-item {
-    font-size: 110px;
-    font-weight: 700;
-    line-height: 110px;
     font-style: italic; }
     .form__output-item span {
       color: #854dff; }
@@ -172,14 +149,9 @@ hr {
 .button {
   display: inline-block;
   position: absolute;
-  top: 70%;
   right: 0;
   background-color: #854dff;
-  width: 100px;
-  height: 100px;
   border-radius: 50%; }
-  .button::before {
-    content: url(../img/icon-arrow.svg); }
 
 .attribution {
   font-size: 11px;
@@ -187,3 +159,111 @@ hr {
   margin-top: 50px; }
   .attribution a {
     color: #3e52a3; }
+
+@media (min-width: 375px) {
+  hr {
+    top: 80%; }
+
+  .wrapper {
+    margin: 65px 50px 0 50px; }
+
+  .inner {
+    min-width: 275px; }
+
+  .form__box {
+    padding: 30px; }
+  .form__inner {
+    justify-content: center;
+    padding-bottom: 80px; }
+  .form__control {
+    text-align: center; }
+  .form__control small {
+    font-size: 6px;
+    font-weight: 400;
+    line-height: 8px; }
+  .form__inner div {
+    margin-right: 10px; }
+  .form__label {
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 10px; }
+  .form__input {
+    padding: 5px 10px;
+    width: 60px;
+    font-size: 11px; }
+  .form__output {
+    padding: 30px; }
+  .form__output-item {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 55px; }
+
+  .button {
+    top: 60%;
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    margin-left: -35px; }
+    .button::before {
+      content: url(../img/icon-arrow-mobile.svg); } }
+@media (min-width: 480px) {
+  .form__input {
+    width: 100px;
+    padding: 10px;
+    font-size: 20px; }
+  .form__inner {
+    padding-bottom: 85px; }
+  .form__inner div {
+    margin-right: 20px; }
+  .form__label {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 25px; }
+  .form__control {
+    text-align: left; }
+  .form__control small {
+    font-size: 8px; }
+  .form__output-item {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 75px; } }
+@media (min-width: 768px) {
+  hr {
+    top: 100%; }
+
+  .wrapper {
+    margin-top: 170px; }
+
+  .form__box {
+    padding: 45px 50px; }
+  .form__inner {
+    justify-content: start;
+    padding-bottom: 50px; }
+    .form__inner div {
+      margin-right: 25px; }
+  .form__input {
+    padding: 10px 25px;
+    width: 170px;
+    font-size: 35px; }
+  .form__control small {
+    font-size: 15px;
+    line-height: 15px; }
+  .form__output {
+    padding: 10px 50px; }
+  .form__output-item {
+    font-size: 100px;
+    line-height: 110px; }
+
+  .button {
+    top: 75%;
+    left: auto;
+    margin-left: 0;
+    width: 100px;
+    height: 100px; }
+    .button::before {
+      content: url(../img/icon-arrow.svg); } }
+@media (min-width: 992px) {
+  .form__inner {
+    padding-bottom: 45px; }
+  .form__output-item {
+    font-size: 110px; } }

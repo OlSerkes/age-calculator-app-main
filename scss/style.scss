@@ -8,17 +8,11 @@ body{
 }
 hr{
     border: 1px solid $lightGrey;
-    position: absolute;
-    top: 100%;
+    position: absolute;    
     width: 100%;
 }
-
-.wrapper {
-    margin-top: 170px;
-    // margin-bottom: 250px;
-}
 .inner {
-    width: 840px;
+    max-width: 840px;
     margin: 0 auto;
     background-color: $white;
     border-radius: 28px;
@@ -26,17 +20,10 @@ hr{
     padding-bottom: 57px;
 }
 .form {    
-    position: relative;    
-    &__box{
-        padding: 45px 50px;
-    }
+    position: relative; 
     &__inner{
         display: flex;
-        flex-direction: row;
-        padding-bottom: 45px;
-        & div{
-            margin-right: 25px;
-        }
+        flex-direction: row;        
     }
     &__control input:focus {
         border-color: $purple;
@@ -48,8 +35,7 @@ hr{
         border-color: $lightRed;
     }
     &__control small {
-        color: $lightRed;
-        @include fonts(15px, 400, 15px);
+        color: $lightRed;        
         font-style: italic;
         visibility: hidden;
     }
@@ -59,43 +45,28 @@ hr{
     &__label{
         display: inline-block;
         text-transform: uppercase;
-        @include fonts(15px, 800, 25px);
         letter-spacing: 2px;
         color: $smokeyGrey;
         padding-bottom: 5px;
     }
     &__input{
         border: 1px solid $lightGrey;
-        border-radius: 5px;
-        padding: 10px 25px;
-        font-weight: 800;
-        width: 170px;
-        font-size: 35px;
-    }
-    &__output{
-        padding: 10px 50px;
-    }
+        border-radius: 5px;        
+        font-weight: 800;        
+    }    
     &__output-item{
-        @include fonts(110px, 700, 110px);
         font-style: italic;
         & span{
             color: $purple;
         }
-    }
-    
+    }    
 }
 .button{
     display: inline-block;
-    position: absolute;
-    top: 70%;
+    position: absolute;    
     right: 0;
-    background-color: $purple;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    &::before{
-        content: url(../img/icon-arrow.svg);        
-    }
+    background-color: $purple;    
+    border-radius: 50%;    
 }
 .attribution {
     font-size: 11px;
@@ -106,3 +77,143 @@ hr{
     }
 }
 
+@media (min-width: 375px){
+    hr {
+        top: 80%;
+    }
+    .wrapper{
+        margin: 65px 50px 0 50px;
+    }
+    .inner{
+        min-width: 275px;
+    }
+    .form{
+        &__box{
+            padding: 30px;
+        }        
+        &__inner{
+            justify-content: center;
+            padding-bottom: 80px;
+        }
+        &__control{
+            text-align: center;
+        }
+        &__control small {
+            @include fonts(6px, 400, 8px);
+        }
+        &__inner div{
+            margin-right: 10px;            
+        }
+        &__label {
+            @include fonts(10px, 800, 10px);
+        }
+        &__input {
+            padding: 5px 10px;
+            width: 60px;
+            font-size: 11px;
+        }
+        &__output {
+            padding: 30px;
+        }
+        &__output-item {
+            @include fonts(38px, 700, 55px);
+        }
+    }
+    .button{
+        top: 60%; 
+        width: 70px;
+        height: 70px;
+        left: 50%;
+        margin-left: -35px;
+        &::before {
+            content: url(../img/icon-arrow-mobile.svg);
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    .form {
+        &__input {
+            width: 100px;
+            padding: 10px;
+            font-size: 20px;
+        }
+        &__inner {
+            padding-bottom: 85px;
+        }
+        &__inner div {
+            margin-right: 20px;
+        }
+        &__label {
+            @include fonts(15px, 800, 25px);
+        }
+        &__control {
+            text-align: left;
+        }
+        &__control small {
+            font-size: 8px;
+        }
+        &__output-item {
+            @include fonts(55px, 700, 75px);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    hr{
+        top: 100%;
+    }
+    .wrapper {
+        margin-top: 170px;
+    }
+    .form {
+        &__box {
+            padding: 45px 50px;
+        }
+        &__inner {
+            justify-content: start;
+            padding-bottom: 50px;
+            & div {
+                margin-right: 25px;
+            }
+        }
+        &__input {
+            padding: 10px 25px;
+            width: 170px;
+            font-size: 35px;
+        }
+        &__control small{
+            font-size: 15px;
+            line-height: 15px;
+        }
+        &__output {
+            padding: 10px 50px;
+        }
+        &__output-item {
+            font-size: 100px;
+            line-height: 110px;
+        }
+            
+    }
+    .button {
+        top: 75%;
+        left: auto;
+        margin-left: 0;
+        width: 100px;
+        height: 100px;
+        &::before {
+            content: url(../img/icon-arrow.svg);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .form {
+        &__inner{
+            padding-bottom: 45px;
+        }
+        &__output-item{
+            font-size: 110px;
+        }
+    }
+}
