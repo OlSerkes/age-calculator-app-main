@@ -82,6 +82,9 @@ body {
   margin: 0 auto;
   color: #141414; }
 
+input:hover {
+  cursor: pointer; }
+
 button {
   cursor: pointer;
   background-color: #854dff;

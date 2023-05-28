@@ -8,6 +8,10 @@ body {
     color: $offBlack;
 }
 
+input:hover{
+    cursor: pointer;
+}
+
 button {
     cursor: pointer;
     background-color: $purple;
