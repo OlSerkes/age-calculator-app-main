@@ -47,7 +47,7 @@ function isValidDate() {
   if (inputDay < 1 || inputDay > 31) {
     showErrorMessage(day, `Must be a valid ${day.name}`);
   }
-  if (inputMonth < 1 || inputMonth > 12) {
+  if (inputMonth < 1 || inputMonth >= 12) {
     showErrorMessage(month, `Must be a valid ${month.name}`);
   }
   if (inputDate > today) {
