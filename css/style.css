@@ -78,8 +78,9 @@ html,
 body {
   width: 100%;
   max-width: 1440px;
-  height: 100%;
-  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
   color: #141414; }
 
 input:hover {
