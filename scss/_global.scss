@@ -8,8 +8,13 @@ body {
     color: $offBlack;
 }
 
-input:hover{
+input:hover {
+    border: 1px solid $purple;
     cursor: pointer;
+}
+
+input:focus {
+    border-color: $purple;
 }
 
 button {

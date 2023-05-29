@@ -24,10 +24,7 @@ hr{
     &__inner{
         display: flex;
         flex-direction: row;        
-    }
-    &__control input:focus {
-        border-color: $purple;
-    }
+    }    
     &__control.succes input{
         border-color: $smokeyGrey;
     }
@@ -72,6 +69,7 @@ hr{
     font-size: 11px;
     text-align: center;
     margin-top: 50px;
+    padding-bottom: 50px;
     & a{
         color: hsl(228, 45%, 44%);
     }
@@ -82,7 +80,7 @@ hr{
         top: 80%;
     }
     .wrapper{
-        margin: 65px 50px 0 50px;
+        margin: 50px;
     }
     .inner{
         min-width: 275px;

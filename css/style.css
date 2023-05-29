@@ -83,7 +83,11 @@ body {
   color: #141414; }
 
 input:hover {
+  border: 1px solid #854dff;
   cursor: pointer; }
+
+input:focus {
+  border-color: #854dff; }
 
 button {
   cursor: pointer;
@@ -122,8 +126,6 @@ hr {
   .form__inner {
     display: flex;
     flex-direction: row; }
-  .form__control input:focus {
-    border-color: #854dff; }
   .form__control.succes input {
     border-color: #716f6f; }
   .form__control.error input {
@@ -159,7 +161,8 @@ hr {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: 50px; }
+  margin-top: 50px;
+  padding-bottom: 50px; }
   .attribution a {
     color: #3e52a3; }
 
@@ -168,7 +171,7 @@ hr {
     top: 80%; }
 
   .wrapper {
-    margin: 65px 50px 0 50px; }
+    margin: 50px; }
 
   .inner {
     min-width: 275px; }
